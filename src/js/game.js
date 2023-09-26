@@ -169,7 +169,12 @@ class Game {
 
 	cleanEmptyNeighbours(currentCellID) {
 		if (typeof currentCellID !== 'number') return;
-		const targets = [ 'up', 'left', 'right', 'down' ]
+		// const targets = [ 'up', 'left', 'right', 'down' ]
+		const targets = [
+			'upLeft', 'up', 'upRight',
+			'left', 'right',
+			'downLeft', 'down', 'downRight',
+		]
 		const callback = function(targetCellID) {
 			const [value, state] = this.settings.field[targetCellID]
 			if (state === this.STATE_HIDDEN_VALUE) {
