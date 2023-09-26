@@ -19,9 +19,9 @@ let $baseDir = {
 	css: $source + '/css/',
 	js: $source + '/js/',
 }
-let $project = 'dist';
+let $project = 'docs';
 let $path = {
-	clean: ['./dist/', './assets/'],
+	clean: ['./docs/', './dist/', './assets/'],
 	watch: {
 		html: $baseDir.html + '**/*.html',
 		scss: $baseDir.css + '**/*.scss',
