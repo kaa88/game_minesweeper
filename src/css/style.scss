@@ -1,0 +1,32 @@
+@use "sass:math";
+@import "mixins-functions";
+@import "reset";
+
+///////////////////////////////////////////////////////
+
+/* Fonts */
+$font-1: Arial, sans-serif;
+
+///////////////////////////////////////////////////////
+
+// Page sizes //
+$font-size-default: 16px; //px
+$page-min-width: calc(320px - (100vw - 100%));
+$page-max-width: 1920;
+$container-desktop-width: 1200;
+$container-mobile-width: 480;
+$container-padding: 5;
+// $container-width: $container-padding * 2 + $container-base-width;
+// $mobile-content-max-width: $media-m + px;
+
+///////////////////////////////////////////////////////
+
+// Transitions //
+$timer-hover: 0.15s;
+
+///////////////////////////////////////////////////////
+
+@import "colors";
+@import "globs";
+
+@import "main";

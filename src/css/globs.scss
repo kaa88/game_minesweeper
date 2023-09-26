@@ -1,0 +1,14 @@
+/* Global elements */
+body {
+	font-family: Arial;
+	font-size: $font-size-default;
+	color: var(--color03);
+	background-color: var(--color07);
+}
+
+.container {
+	width: 100%; //REQ!
+	min-width: $page-min-width; //REQ!
+	max-width: $container-padding * 2 + $container-desktop-width + px; //REQ!
+	margin: 0 auto; //REQ!
+}

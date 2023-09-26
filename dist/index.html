@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Minesweeper</title>
+	<link rel="stylesheet" href="css/style.css">
+	<script defer src="js/script.js"></script>
+</head>
+<body>
+	<noscript>You must enable JavaScript to run this app</noscript>
+	<div class="container">
+		<div class="menu">
+			<h1>Minesweeper</h1>
+			<div class="menu__content">
+				<div class="menu__new">
+					<p>Width</p>
+					<input class="menu__input" id="width" type="number">
+					<p>Height</p>
+					<input class="menu__input" id="height" type="number">
+					<p>Mines</p>
+					<input class="menu__input" id="mines" type="number">
+					<button class="menu__button" id="start-btn">start</button>
+					<div class="message"></div>
+				</div>
+				<div class="menu__resume">
+					<p>Whould you like to resume previous game?</p>
+					<button class="menu__button" id="resume-btn">resume</button>
+					<button class="menu__button" id="new-btn">new</button>
+				</div>
+			</div>
+		</div>
+		<div class="game">
+			<div class="game__status">
+				<div class="game__header header">
+					<div class="header-buttons active">
+						<button class="header-buttons__menu-btn">MENU</button>
+						<button class="header-buttons__reset-btn">RESTART</button>
+					</div>
+				</div>
+				<div class="game__gamebar gamebar">
+					<div class="gamebar__timer">00:00</div>
+					<button class="gamebar__mark-btn">∆</button>
+					<div class="gamebar__minecount">0</div>
+				</div>
+			</div>
+			<div class="game__field field"></div>
+		</div>
+	</div>
+</body>
+</html>

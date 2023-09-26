@@ -1,0 +1,32 @@
+// Mixins (@include)
+@mixin text-nowrap() {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+@mixin text-max-lines($lines) {
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: $lines;
+	overflow: hidden;
+}
+
+
+// Functions
+@function resize-multiplier($size, $media, $multiplier: 1, $base: 100vw) {
+	@return calc($size * $multiplier / $media * $base + $size * (1 - $multiplier) * 1px);
+	// example: width: resize-multiplier(300, $media-footer, 0.8);
+	// size - размер элемента на границе отсчета
+	// media - граница отсчета
+	// multiplier - значения от 0 до 1 - понижающие (замедляют ресайз), от 1 и выше - повышающие (ускоряют), отрицательные значания - дают реверс
+	// base - база расчета (vw, vh, vmax...)
+}
+@function em($px, $context: 16) {
+	@return math.div($px, $context) * 1em;
+	// context - пересчет относительно текущего эл-та. например, если нужно задать ширину текстового блока, но font-size блока установлен 30:
+	// font-size: 30px;
+	// width: em(720, 30); - получится ширина 720 по макету
+}
+@function rem($px, $context: 16) {
+	@return math.div($px, $context) * 1rem;
+}
