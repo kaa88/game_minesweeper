@@ -302,8 +302,8 @@ body {
   background-color: var(--color04);
 }
 .gamebar__mark-btn.active {
-  -webkit-box-shadow: inset 0 0 3px 0 #444;
-          box-shadow: inset 0 0 3px 0 #444;
+  -webkit-box-shadow: 0 0 0 3px orange, inset 0 0 3px 0 #333;
+          box-shadow: 0 0 0 3px orange, inset 0 0 3px 0 #333;
 }
 
 .field table {
